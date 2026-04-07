@@ -1,0 +1,34 @@
+package it.uniroma3.diadia.giocatore;
+
+public class Giocatore {
+	
+	static final private int CFU_INIZIALI = 20;		// valore iniziale 20
+	
+	private int cfu;
+	private Borsa borsa;
+
+	public Giocatore() {
+		this(CFU_INIZIALI);
+	}
+
+	public Giocatore(int cfuCustom) {
+		this.cfu = cfuCustom;
+		this.borsa = new Borsa();
+	}
+	/*
+	 * Getter e setter cfu e borsa
+	 */
+	public int getCfu() {
+		return cfu;
+	}
+
+	public void setCfu(int cfu) {
+		this.cfu = cfu;
+	}
+
+	public Borsa getBorsa() {
+		return this.borsa;
+	}
+	
+	
+}
