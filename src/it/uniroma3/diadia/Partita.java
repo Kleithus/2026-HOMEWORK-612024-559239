@@ -30,15 +30,23 @@ public class Partita {
 	 * @return vero se partita vinta
 	 */
 	public boolean vinta() {
-		return this.lab.getStanzaCorrente()== this.lab.getStanzaVincente();
+		return this.getStanzaCorrente()== this.getStanzaVincente();
 	}
 
+	/**
+	 * Restituisce vero se e solo se il giocatore finisce i suoi CFU
+	 * @return vero se CFU finiti
+	 */
+	public boolean giocatoreIsVivo() {
+		return this.pg.getCfu() != 0;
+	}
+	
 	/**
 	 * Restituisce vero se e solo se la partita e' finita
 	 * @return vero se partita finita
 	 */
 	public boolean isFinita() {
-		return this.finita || this.vinta() || (this.pg.getCfu() == 0);
+		return this.finita || this.vinta() || !this.giocatoreIsVivo();
 	}
 
 	/**
@@ -48,11 +56,24 @@ public class Partita {
 		this.finita = true;
 	}
 	
+	/**
+	 * Metodi getter e setter
+	 */
+	
+	public Stanza getStanzaCorrente() {
+		return this.lab.getStanzaCorrente();
+	}
+	
+	public Stanza getStanzaVincente() {
+		return this.lab.getStanzaVincente();
+	}
+	
 	public Labirinto getLabirinto() {
 		return this.lab;
 	}
 	
-	public Giocatore getPg() {
+	public Giocatore getGiocatore() {
 		return this.pg;
 	}
+
 }
