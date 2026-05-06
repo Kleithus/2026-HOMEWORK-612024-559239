@@ -13,11 +13,12 @@ public interface Comando {
 	 * set parametro del comando
 	 */
 	public void setParametro(String parametro);
+
 	
 	/*
 	 * Get nome e parametro
 	 */
-//	public String getNome();
-//	
-//	public String getParametro();
+	public String getNome();
+
+	public String getParametro();
 }

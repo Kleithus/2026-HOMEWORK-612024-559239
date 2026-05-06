@@ -53,7 +53,7 @@ class PartitaTest {
 	
 	@Test
 	void testIsFinitaTrueCfuEqualZero() {
-		game.getPg().setCfu(0);
+		game.getGiocatore().setCfu(0);
 		assertTrue(game.isFinita());
 	}
 }

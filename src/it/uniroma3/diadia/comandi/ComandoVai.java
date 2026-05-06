@@ -6,8 +6,8 @@ import it.uniroma3.diadia.ambienti.Stanza;
 
 public class ComandoVai implements Comando {
 
-	public String direzione;
-	public IO io;
+	private String direzione;
+	private IO io;
 	
 	public ComandoVai(IO io2) {
 		this.io = io2;
@@ -35,6 +35,18 @@ public class ComandoVai implements Comando {
 	@Override
 	public void setParametro(String parametro) {
 		this.direzione = parametro;
+	}
+
+	@Override
+	public String getNome() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getParametro() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
